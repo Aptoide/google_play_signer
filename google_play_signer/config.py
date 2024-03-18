@@ -73,8 +73,8 @@ else:
             APPTECH_ISSUER: load_pem_key(APPTECH_ISSUER_PUBKEY)
             }
     APPTECH_PRIVATE_KEY = load_pem_key(APPTECH_ISSUER_PRIVKEY)
-    UPLOADER = "https://uploader.catappult.io/"
-    CATAPPULT_WS = "https://ws.catappult.io/"
+    UPLOADER = os.getenv(UPLOADER_ENV)
+    CATAPPULT_WS = os.getenv(CATTAPULT_WS_ENV)
 
 
 CATAPPULT_UPLOADER = UPLOADER + "api?accountUid={}"
